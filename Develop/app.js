@@ -20,7 +20,7 @@ const employeeQuestions = [
     {
         type: 'input',
         name: 'name',
-        message: 'What is the employee name?'
+        message: 'What is the employee\'s name?'
     },
     {
         type: 'input',
@@ -39,13 +39,13 @@ const employeeQuestions = [
     {
         type: 'input',
         name: 'email',
-        message: 'What is the employee\'s email adress(example@wtz.xyz)?',
+        message: 'What is the employee\'s email(example@wtz.xyz)?',
         validate: function ValidateEmail(email) {
             // email validation refereence:  https://www.w3resource.com/javascript/form/email-validation.php
             if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(myForm.emailAddr.value)) {
                 return (true)
             }
-            console.log("You have entered an invalid email address!")
+            console.log("You have entered an invalid email!")
             return (false)
         }
     },
@@ -62,7 +62,7 @@ const engineerQuestions = [
     {
         type: 'input',
         name: 'github',
-        message: 'What is the engineer\'s github username?'
+        message: 'What is the engineer\'s github Username?'
     }
 ]
 // specific questions for interns only
@@ -94,20 +94,84 @@ const managerQuestions = [
 // Question asking the user if there is a need to add more employee data
 const moreQuestions = [
     {
-        type: 'confirem',
+        type: 'confirm',
         name: 'more',
-        message: 'Do you want add more employees?',
+        message: 'Do you want to add another more employees?',
     }
 ]
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
 // generate and return a block of HTML including templated divs for each employee!
+//
+
+
 async function renderInfo() {
     try {
+const myEmployees = []
+var addEmployees = true;
+while (addEmployees){
+// wait the results
+    const employeeAnswers = await inquirer.prompt(employeeQuestions);
 
+    // for spesific questions
 
+switch (employeeAnswers.employeeType){
+    case 'Manager': {
+        const managerAnswers = await inquirer.prompt(managerQuestions);
+        employeeAnswers.thisAnswers = managerAnswers;
+        break;
+    }
+    case 'Intern': {
+const internAnswers = await inquirer.prompt(InternQuestions);
+employeeAnswers.thisAnswers = internAnswers;
+break;
+    }
+    case 'Engineer': {
+        const engineerAnswers = await inquirer.prompt(engineerQuestions);
+        employeeAnswers.thisAnswers = engineerAnswers;
+        break;
+    }
+}
+myEmployees.push(employeeAnswers);
+const moreEmployeeObject = await inquirer.prompt(moreEmployeeQuestion);
+addEmployees = moreEmployeeObject.more;
+}
+const totalEmployees = [];
+// for each employee in my employee list
+myEmployees.forEach(employee => {
+    const name = employee.name;
+    const id = employee.id;
+    const email = employee.email;
+    const employeeType = employee.employeeType;
 
-    } catch {
+    //employee type additional information
+    switch (employeeType){
+        case 'Manager': {
+            const officeNumber = employee.thisAnswers.officeNumber;
+            const manager = new Manager(name, id, email, officeNumber);
+            totalEmployees.push(manager);
+            break;
+        }
+        case 'Intern': {
+            const school = employee.thisAnswers.school;
+            const intern = new Intern(name, id, email, school);
+            totalEmployees.push(intern);
+            break;
+        }
+        case 'Engineer': {
+            const githubUsername = employee.thisAnswers.githubUsername;
+            const engineer = new Engineer(name, id, email, githubUsername);
+            totalEmployees.push(engineer);
+            break;
+        }
+    }
+
+})
+return (totalEmployees);
+    }
+     catch(err) {
+        // if error, return the error
+        console.log(err)
 
     }
 }
@@ -119,6 +183,20 @@ async function renderInfo() {
 // Hint: you may need to check if the `output` folder exists and create it if it
 // does not.
 
+//generate team html template based on for every employee
+async function renderHTMLTemplate(){
+    const totalEmployees = await renderQuestions();
+    const outputHTML = await render(totalEmployees);
+    fs.writeFile(outputPath, outputHTML, function(err){
+        if(err){
+            return console.log(err);
+        }else{
+            console.log('Compled wrote the team.html file!');
+        }
+    })
+}
+//
+renderHTMLTemplate();
 // HINT: each employee type (manager, engineer, or intern) has slightly different
 // information; write your code to ask different questions via inquirer depending on
 // employee type.
