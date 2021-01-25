@@ -1,28 +1,40 @@
+body{
+    background-color: lightblue;
+}
+
 .d-flex {
     display: flex;
     flex-wrap: wrap;
 }
+
 .team-heading {
-    background-color: grey;
-    color: aliceblue;
+    background-color: #1779ba;
+    color: black;
+    padding: 45px;
+    border-bottom: 1px black solid;
 }
+
 .employee-card {
     box-shadow: inset 4px 3px 8px 1px;
   	-webkit-box-shadow: inset 4px 3px 8px 1px;
     margin: 5px;
 }
+
 h2, h3 {
-    color: rgb(96, 16, 16);
+    color: blue;
     text-align: center;
 }
+
 i {
-    color: rgb(44, 117, 125);
+    color: blue;
 }
+
 .card-header {
     border: 1px solid #000000;
 }
 
 .list-group-item {
-    background-color: rgb(173, 230, 221);
+    background-color: wheat;
 }
+
 
