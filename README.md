@@ -91,7 +91,7 @@
 
   ## Developers Contact Information
    * LinkdIn Profile: [Desta Mulualem](https://www.linkedin.com/in/desta-mulualem-6718b1203/)
-   * Deployed URL :  https://destish21.github.io/employee-team-profile-generator/output/team.html
+   * Deployed URL :  https://destish21.github.io/employee-team-profile-generator/Develop/output/team.html
    * github URL: https://github.com/destish21/employee-team-profile-generator
 
    * Email: destish21@yahoo.com
