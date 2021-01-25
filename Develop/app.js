@@ -12,8 +12,7 @@ const render = require("./lib/htmlRenderer");
 const Choice = require("inquirer/lib/objects/choice");
 const { type } = require("os");
 
-
-// and to create objects for each team member (using the correct classes as blueprints!)
+// objects questions in json form for each team members 
 const employeeInformation = [
     {
         type: 'input',
@@ -46,6 +45,7 @@ const employeeInformation = [
             console.log("\nYou have entered an invalid email address!")
             return false
         }
+
     },
 
     {
@@ -97,19 +97,13 @@ const moreEmployeeQuestion = [
         message: 'press YES to add more employees!, or press ENTER to end!'
     }
 ]
-// console.log(employeeInformation)
+// write your code to ask different questions via inquirer depending on employee type.
 var renderQuestions = async () => {
     try {
         const myEmployees = []
         var addEmployees = true;
-        // var addEmployees = moreEmployeeQuestion.choices[0]
-
         while (addEmployees) {
-            // wait the results
             const employeeAnswers = await inquirer.prompt(employeeInformation);
-
-            // for spesific questions
-
             switch (employeeAnswers.employeeType) {
                 case 'Manager': {
                     const managerAnswers = await inquirer.prompt(managerQuestions);
@@ -140,7 +134,7 @@ var renderQuestions = async () => {
             const email = employee.email;
             const employeeType = employee.employeeType;
 
-            //employee type additional information
+            //each employee type (manager, engineer, or intern) has slightly different questions here
             switch (employeeType) {
                 case 'Manager': {
                     const officeNumber = employee.thisAnswers.officeNumber;
@@ -173,7 +167,7 @@ var renderQuestions = async () => {
     }
 }
 
-//generate team html template based on for every employee
+//generate team html template based on for every employee at output` folder.
 var renderHTMLTemplate = async () => {
     const totalEmployees = await renderQuestions();
     const outputHTML = await render(totalEmployees);
@@ -185,5 +179,5 @@ var renderHTMLTemplate = async () => {
         }
     })
 }
-//
+//calling the renderHTMLTemplate;
 renderHTMLTemplate();
