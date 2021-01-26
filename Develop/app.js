@@ -175,7 +175,7 @@ var renderHTMLTemplate = async () => {
         if (err) {
             return console.log(err);
         } else {
-            console.log('Compled wrote the team.html file!');
+            console.log('Completed wrote the team.html file!');
         }
     })
 }
