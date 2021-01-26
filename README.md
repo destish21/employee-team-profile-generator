@@ -92,9 +92,9 @@
    ### Click the  video links to wach video 1 and video 2 demonstration:  
 
 
-   * [Watch the video1](https://drive.google.com/file/d/13Ek5_a2yhRKBvolLvIwGzpphwaK5C_RB/view?usp=sharing)
+   * [Watch the video 1](https://drive.google.com/file/d/13Ek5_a2yhRKBvolLvIwGzpphwaK5C_RB/view?usp=sharing)
   
-   * [Watch the video2](https://drive.google.com/file/d/1QeEtYFUPniLX8ZqN8y_NJk6BcEOSqoMB/view?usp=sharing)
+   * [Watch the video 2](https://drive.google.com/file/d/1QeEtYFUPniLX8ZqN8y_NJk6BcEOSqoMB/view?usp=sharing)
     
   
    ## Contribution
