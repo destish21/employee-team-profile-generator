@@ -1,10 +1,10 @@
 # Employee-team-profile-generator
 
- ## License
+  ## License
    [![License:MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   
-  # Table of Contents
+   # Table of Contents
 
    * [Installation Instructions](#installation-instructions)
   
@@ -16,13 +16,13 @@
 
    * [License](#license)
 
-  # Description
+   # Description
 
    * This application is developed to help project developers to save time in generating team-html webpage profile. That takes in information about employees and generates an HTML webpage that displays summaries for each person. clearly and briefly.
-  * This app I styled and looks good.
+   * This app I styled and looks good.
    * Developers can quickly and easily create  information about employees and generates an HTML webpage that displays summaries for each person. by using a command-line application to generate one. 
 
-  * The app runs as a app.js to gather information about each employee, email, id, and specific information based on   their role with the company. For instance, an intern may provide their school, manager may provide their OfficeNumber, whereas an engineer may provide their GitHub username.
+   * The app runs as a app.js to gather information about each employee, email, id, and specific information based on   their role with the company. For instance, an intern may provide their school, manager may provide their OfficeNumber, whereas an engineer may provide their GitHub username.
 
    * you can quickly create a employee-team-profile-generator.
 
@@ -31,11 +31,11 @@
    * I put my LinkedIn profile, github and email address working activly.
 
 
-  ## Installation Instructions
+   ## Installation Instructions
 
    * The developer is authorizing a free installation by cloning from the repository code:- 
 
-   [destish21/employee-team-profile-generator](https://github.com/destish21/employee-team-profile-generator).
+   * [destish21/employee-team-profile-generator](https://github.com/destish21/employee-team-profile-generator).
 
 
    * you can run by install npm i to include node_module.
@@ -44,7 +44,7 @@
 
    * ![employee-team-profile-generator](./Develop/Images/team5.png)
   
-  ## Usage Instructions
+   ## Usage Instructions
 
    * For this app to run make sure first 
    intall the node_moduale.
@@ -55,7 +55,7 @@
 
    * [destish21/employee-team-profile-generator](https://github.com/destish21/employee-team-profile-generator)
  
-  * employee-team-profile-generator and clone it in your comand line.
+   * employee-team-profile-generator and clone it in your comand line.
 
    * Make sure node_modules run by `npm i or npm installed`
      in your computer.
@@ -74,7 +74,7 @@
    * you can tests  the classes by commandline. 
        `npm run test`
 
-  * I built with  validation Id,email and OfficeNumber to ensure that the information provided is in the prope   expected format. 
+   * I built with  validation Id,email and OfficeNumber to ensure that the information provided is in the prope   expected format. 
 
    * you can  quickly access to emails and GitHub profiles.
 
@@ -87,24 +87,24 @@
 
    * Test Screenshot image 
  
-  ![employee-team-profile-generator](./Develop/Images/test1.png)
+   ![employee-team-profile-generator](./Develop/Images/test1.png)
   
-  ### Click the  video links to wach video 1 and video 2 demonstration:  
+   ### Click the  video links to wach video 1 and video 2 demonstration:  
 
 
-  [Watch the video1](https://drive.google.com/file/d/13Ek5_a2yhRKBvolLvIwGzpphwaK5C_RB/view?usp=sharing)
+   * [Watch the video1](https://drive.google.com/file/d/13Ek5_a2yhRKBvolLvIwGzpphwaK5C_RB/view?usp=sharing)
   
-  [Watch the video2](https://drive.google.com/file/d/1QeEtYFUPniLX8ZqN8y_NJk6BcEOSqoMB/view?usp=sharing)
+   * [Watch the video2](https://drive.google.com/file/d/1QeEtYFUPniLX8ZqN8y_NJk6BcEOSqoMB/view?usp=sharing)
     
   
-  ## Contribution
+   ## Contribution
   
    * This is Contributed by [destish21/employee-team-profile-generator](https://github.com/destish21/employee-team-profile-generator). 
    * But Contribution, issues and feature requests are welcome.
    * Feel free to check issues page if you want to contribute. 
    * you can contact me by Contact Information here below.
 
-  ## Developers Contact Information
+   ## Developers Contact Information
    * LinkdIn Profile: [Desta Mulualem](https://www.linkedin.com/in/desta-mulualem-6718b1203/)
    * Deployed URL :  https://destish21.github.io/employee-team-profile-generator/Develop/output/team.html
    * github URL: https://github.com/destish21/employee-team-profile-generator
