@@ -78,10 +78,10 @@
 
    * you can  quickly access to emails and GitHub profiles.
 
-   ![employee-team-profile-generator](./Develop/Images/team1.png)
-   ![employee-team-profile-generator](./Develop/Images/team2.png)
-   ![employee-team-profile-generator](./Develop/Images/team3.png)
-   ![employee-team-profile-generator](./Develop/Images/team4.png)
+   ![employee-team-profile-generator](./Develop/Images/team01.png)
+   ![employee-team-profile-generator](./Develop/Images/team02.png)
+   ![employee-team-profile-generator](./Develop/Images/team03.png)
+   ![employee-team-profile-generator](./Develop/Images/team04.png)
 
    * My `employee-team-profile-generator` is in my repository enjoy it!
 
