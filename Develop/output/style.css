@@ -9,6 +9,7 @@ body{
 
 .team-heading {
     background-color: #1779ba;
+    background-color:#dc3545;
     color: black;
     padding: 45px;
     border-bottom: 1px black solid;
@@ -21,15 +22,16 @@ body{
 }
 
 h2, h3 {
-    color: blue;
+    color: white;
     text-align: center;
 }
 
 i {
-    color: blue;
+    color: white;
 }
 
 .card-header {
+    background-color:#007bff; ;
     border: 1px solid #000000;
 }
 
